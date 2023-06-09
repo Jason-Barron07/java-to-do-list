@@ -9,7 +9,7 @@
 
 document.querySelector('#add').onclick = function(){}
     document.querySelector('#add').onclick = function(){
-        if(document.querySelector('#input').value.length == 0){}
+        if(document.querySelector('#input').value.length === 0){}
         else{
             document.querySelector('#tasks').innerHTML += `
         <div class="task">
@@ -27,11 +27,29 @@ document.querySelector('#add').onclick = function(){}
                 current_tasks[i].onclick = function(){
                     this.parentNode.remove();}
     }
-        }
-      };
+        } };
     
 
+        const obj={
 
+            name:'Ryan',
+            surname:'Barron',
+           
+}
+
+console.log(obj)
+let newObj=JSON.parse(JSON.stringify(obj))
+newObj.firstname = 'Ryan'
+newObj.lastname = 'Barron'
+
+
+console.log(newObj)
+
+localStorage.setItem('x','Ryan')
+
+localStorage.getItem('x')
+
+console.log(localStorage.getItem('x'));
 
 
 
